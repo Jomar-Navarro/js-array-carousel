@@ -27,7 +27,7 @@ Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di 
 1.  Inserisco gli elementi HTML;
 2.  Inserisco tutte  le immagini su un array;
 3.  Inizializzo un contatore di immagini a 0;
-4.  Creo un ciclo dell'array delle immagini che ad ogni ciclo mi aggiunge un tag con l'immagine;
+4.  Creo un ciclo dell'array delle immagini che ad ogni ciclo mi aggiunge un tag con l'immagine all'interno del '.items-wrapper' e del '.thumbnail-wrapper';
 5.  Creo una variabile che mi toglie la classe hide al primo elemento;
-6.  Al click delle frecce all'aumentare o decrementare del contatore, rimette la classe 'hide';
-7.  Rimuovo la classe 'hide' all'elemento in base all'indice del contatore;
+6.  Creo una variabile che mi aggiunge la classe active al tag 'thumb';
+7.  Al click delle frecce all'aumentare o decrementare del contatore, rimette o toglie la classe 'hide' e la classe 'active' ai loro rispettivi tag.
