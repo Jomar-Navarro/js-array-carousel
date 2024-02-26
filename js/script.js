@@ -14,6 +14,7 @@ const images = [
   'assets/img/05.webp',
 ];
 
+// ItemsWrapper mi stampa il tag img la le immagini dell'array con le sua apposita classe hide
 for (let i = 0; i < images.length; i++) {
   const img = images[i];
   itemsWrapper.innerHTML += `
@@ -21,23 +22,32 @@ for (let i = 0; i < images.length; i++) {
   `
 }
 
+// Mi rimuove l'hide della prima immagine
 const itemsCollector = document.getElementsByClassName('img');
-
 itemsCollector[counterImg].classList.remove('hide');
 
+// Freccia in alto
 topArrow.addEventListener('click', function(){
   itemsCollector[counterImg--].classList.add('hide');
+  
+  // L'immagine quando é minore di 0 del contatore prende l'ultima immagine
+  if (counterImg < 0) {
+    counterImg = images.length - 1;
+  }
 
   itemsCollector[counterImg].classList.remove('hide');
-
 })
 
+// Freccia in basso
 downArrow.addEventListener('click', function(){
 
   itemsCollector[counterImg++].classList.add('hide');
 
-  itemsCollector[counterImg].classList.remove('hide');
+  // Alla fine del contatore dell'array, l'immagine ritorna a 0
+  if (counterImg >= images.length) {
+    counterImg = 0;
+  }
 
-  
+  itemsCollector[counterImg].classList.remove('hide');
 })
 
